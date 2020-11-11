@@ -1,1 +1,0 @@
-# starter-lion-based
