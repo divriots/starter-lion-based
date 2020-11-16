@@ -7,7 +7,8 @@ export default {
   },
 };
 
-export const primary = () => html`<lion-button>Primary</lion-button>`;
+export const basic_buttons = () => html`<orbit-button>Primary</orbit-button>
+  <orbit-button type="secondary">Secondary</orbit-button>
+  <orbit-button type="critical">Critical</orbit-button> `;
 
-export const secondary = () =>
-  html`<lion-button variant="secondary">Secondary</lion-button>`;
+export const buttons_with_icons = () => html`TODO`;

@@ -1,20 +1,34 @@
 import { css } from "@lion/core";
 import { LionButton } from "@lion/button";
-import { color } from "~/colors";
+
+import {
+  backgroundPrimaryBase,
+  backgroundSecondaryBase,
+  backgroundCriticalBase,
+} from "./button-vars";
+import { borderRadiusNormal } from "~/radii";
 
 const customStyle = css`
   :host {
-    background: ${color.primary};
+    background: ${backgroundPrimaryBase};
     color: white;
+    border-radius: ${borderRadiusNormal};
   }
 
-  :host([variant="secondary"]) {
-    background: ${color.secondary};
+  :host([type="secondary"]) {
+    background: ${backgroundSecondaryBase};
+    color: #252A31;
+  }
+
+  :host([type="critical"]) {
+    background: ${backgroundCriticalBase};
   }
 `;
 
-export class Button extends LionButton {
+class OrbitButton extends LionButton {
   static get styles() {
     return [LionButton.getStyles(), customStyle];
   }
 }
+
+export { OrbitButton };

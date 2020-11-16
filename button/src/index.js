@@ -1,3 +1,3 @@
-import { Button } from "./button.js";
+import { OrbitButton } from "./button.js";
 
-customElements.define("lion-button", Button);
+customElements.define("orbit-button", OrbitButton);
