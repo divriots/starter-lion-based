@@ -4,13 +4,11 @@ title: Button background Tokens
 
 ```js script
 import { html } from "lit-html";
+import subitem from "~/filters";
 import { backgrounds } from "../src/index.js";
 import { ColorSwatch } from "@divriots/base-swatch";
 customElements.define("color-swatch", ColorSwatch);
-const tokens = backgrounds.filter(
-  (c) => c.attributes.item === "button" || c.attributes.item === "button-link"
-);
-
+const tokens = backgrounds.filter((c) => c.attributes.item === "button");
 const isPrimary = (c) => c.attributes.subitem === "primary";
 const isSecondary = (c) => c.attributes.subitem === "secondary";
 const isWhite = (c) => c.attributes.subitem === "white";
